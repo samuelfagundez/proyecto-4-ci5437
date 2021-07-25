@@ -2,7 +2,8 @@
 
 ### How to run
 
-npm start  `<domain file>` `<problem file>`
+1. npm install
+2. npm start  `<domain file>` `<problem file>`
 
 ### Description
 
