@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-4-ci5437",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelfagundez/proyecto-4-ci5437.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelfagundez/proyecto-4-ci5437/issues"
+  },
+  "homepage": "https://github.com/samuelfagundez/proyecto-4-ci5437#readme",
+  "dependencies": {
+    "strips": "^0.0.10"
+  }
+}
