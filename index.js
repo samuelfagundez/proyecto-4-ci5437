@@ -1,4 +1,5 @@
 var strips = require("strips");
+const fs = require("fs");
 
 const args = process.argv.slice(2);
 
@@ -22,9 +23,25 @@ strips.load(
     for (var i in solutions) {
       var solution = solutions[i];
 
+      fs.writeFile(
+        `${args[3] || "Results.txt"}`,
+        `- Solution found in ${solution.steps} steps!\n`,
+        function (err) {
+          if (err) return console.log(err);
+        }
+      );
       console.log("- Solution found in " + solution.steps + " steps!");
+
       for (var i = 0; i < solution.path.length; i++) {
-        console.log(i + 1 + ". " + solution.path[i]);
+        const output = `${i + 1}. ${solution.path[i]}`;
+        fs.appendFile(
+          `${args[3] || "Results.txt"}`,
+          `${output}\n`,
+          function (err) {
+            if (err) return console.log(err);
+          }
+        );
+        console.log(output);
       }
     }
   }
