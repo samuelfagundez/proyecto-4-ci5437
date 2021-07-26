@@ -60,6 +60,8 @@
         (border grassfield15 grassfield14)
 
         (at ash grassfield13)
+        (has-no-masterball ash)
+        (has-no-legendary-pokemon ash)
         (at raikou grassfield2)
         (at entei grassfield14)
         (at suicune grassfield0)
@@ -69,8 +71,11 @@
         (wall grassfield10)
 
         (at item1 grassfield4)
+        (in masterball1 item1)
         (at item2 grassfield12)
+        (in masterball2 item2)
         (at item3 grassfield15)
+        (in masterball3 item3)
    )
 
    (:goal (and (has-three-legendary-pokemon ash)))
