@@ -15,7 +15,7 @@ Ash wants to capture 3 legendary pokemons, for that, he will have to pick up the
 
 ### Reserved words for creating a world using the pokemon-world domain
 
-#### Checkout the examples if you need ideas to use it.
+#### Check out the examples if you need ideas to use it.
 
 - `?a - player`: Defines **a** as a **player**.
 - `?a - location`: Defines **a** as a **location**.
