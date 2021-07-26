@@ -1,15 +1,15 @@
 (define (problem capture-legendary-dogs)
     (:domain pokemon-world)
 
-    (:objects 
-        ash - player
-        raikou entei suicune - legendarypokemon
-        item1 item2 item3 - chest
-        masterball1 masterball2 masterball3 - masterball
-        grassfield0 grassfield2 grassfield3 grassfield4 grassfield5 grassfield6 grassfield7 grassfield8 grassfield9 grassfield10 grassfield11 grassfield12 grassfield13 grassfield14 grassfield15 grassfield16 grassfield17 grassfield18 grassfield19 grassfield20 grassfield21 grassfield22 grassfield23 grassfield24 grassfield24 - location
-    )
+    (:objects
+      ash - player
+      raikou entei suicune - legendarypokemon
+      grassfield0 grassfield1 grassfield2 grassfield3 grassfield4 grassfield5 grassfield6 grassfield7 grassfield8 grassfield9 grassfield10 grassfield11 grassfield12 grassfield13 grassfield14 grassfield15 grassfield16 grassfield17 grassfield18 grassfield19 grassfield20 grassfield21 grassfield22 grassfield23 grassfield24 - location
+      item1 item2 item3 - chest
+      masterball1 masterball2 masterball3 - masterball
+   )
 
-    (:init
+   (:init
         (border grassfield0 grassfield1)
         (border grassfield1 grassfield0)
         (border grassfield0 grassfield5)
@@ -91,6 +91,10 @@
         (border grassfield23 grassfield24)
         (border grassfield24 grassfield23)
 
+        (at ash grassfield22)
+        (at raikou grassfield4)
+        (at entei grassfield23)
+        (at suicune grassfield20)
         (wall grassfield2)
         (wall grassfield3)
         (wall grassfield6)
@@ -99,20 +103,10 @@
         (wall grassfield18)
         (wall grassfield21)
 
-        (at ash grassfield22)
-        (at raikou grassfield4)
-        (at entei grassfield23)
-        (at suicune grassfield20)
         (at item1 grassfield1)
         (at item2 grassfield9)
         (at item3 grassfield24)
+   )
 
-        (in masterball1 item1)
-        (in masterball2 item2)
-        (in masterball1 item1)
-
-    )
-
-    (:goal (and (has-three-legendary-pokemon ash)))
-
+   (:goal (and (has-three-legendary-pokemon ash)))
 )

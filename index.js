@@ -18,6 +18,9 @@ strips.load(
     // var solutions = strips.solve(domain, problem, cost);
 
     var solutions = strips.solve(domain, problem);
+    
+    if (!solutions.length)
+      return console.log("There is no solution for this problem.");
 
     // Display each solution.
     for (var i in solutions) {

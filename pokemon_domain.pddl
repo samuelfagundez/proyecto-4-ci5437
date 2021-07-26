@@ -16,19 +16,19 @@
 
     (:action collect-first-masterball
         :parameters (?p - player ?c - chest ?l1 - location ?mb - masterball)
-        :precondition (and (at ?p ?l1) (at ?c ?l1) (open ?c) (in ?mb ?c) (not (empty ?c)))
+        :precondition (and (at ?p ?l1) (at ?c ?l1) (open ?c) (not (empty ?c)))
         :effect (and (empty ?c) (has-one-masterball ?p))
     )
 
     (:action collect-second-masterball
         :parameters (?p - player ?c - chest ?l1 - location ?mb - masterball)
-        :precondition (and (at ?p ?l1) (at ?c ?l1) (open ?c) (in ?mb ?c) (not (empty ?c)) (has-one-masterball ?p)) 
+        :precondition (and (at ?p ?l1) (at ?c ?l1) (open ?c) (has-one-masterball ?p) (not (empty ?c))) 
         :effect (and (empty ?c) (not (has-one-masterball ?p)) (has-two-masterball ?p))
     )
 
     (:action collect-third-masterball
         :parameters (?p - player ?c - chest ?l1 - location ?mb - masterball)
-        :precondition (and (at ?p ?l1) (at ?c ?l1) (open ?c) (in ?mb ?c) (not (empty ?c)) (has-two-masterball ?p))
+        :precondition (and (at ?p ?l1) (at ?c ?l1) (open ?c) (has-two-masterball ?p) (not (empty ?c)))
         :effect (and (empty ?c) (not (has-two-masterball ?p)) (has-three-masterball ?p))
     )
 
