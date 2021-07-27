@@ -5,20 +5,40 @@ const fs = require("fs");
 
 const args = process.argv.slice(2);
 
+function cost(state) {
+  // This is our A* heuristic method to calculate the cost of a state.
+  // For Starcraft, the heuristic will be how many required buildings have been built. Subtract x from cost for each correct building, with 0 meaning all required buildings have been made and we're done.
+  var cost = 15;
+
+  for (var i in state.actions) {
+    var action = state.actions[i].action;
+
+    if (action == "has-three-legendary-pokemon") {
+      cost -= 5;
+    } else if (action == "has-two-legendary-pokemon") {
+      cost -= 5;
+    } else if (action == "has-one-legendary-pokemon") {
+      cost -= 5;
+    }
+  }
+
+  return cost;
+}
+
 // Load the domain and problem.
 strips.load(
   args[0] || "./example/domain.pddl",
   args[1] || "./example/problem.pddl",
   function (domain, problem) {
     // Run the problem against the domain, using depth-first-search.
-    var solutions = strips.solve(domain, problem);
+    // var solutions = strips.solve(domain, problem);
 
     // Use breadth-first-search.
     // var solutions = strips.solve(domain, problem, false);
 
     // Use A* search to run the problem against the domain.
     // cost must be a costs function which recieves a state and returns a cost
-    // var solutions = strips.solve(domain, problem, cost);
+    var solutions = strips.solve(domain, problem, cost);
 
     if (!solutions.length)
       return console.log("There is no solution for this problem.");
