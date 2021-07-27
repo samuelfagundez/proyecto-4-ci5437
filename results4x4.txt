@@ -1,0 +1,38 @@
+- Solution found in 37 steps!
+2. move ash grassfield9 grassfield8
+3. move ash grassfield8 grassfield4
+1. move ash grassfield13 grassfield9
+4. open ash item1 grassfield4
+5. move ash grassfield4 grassfield8
+8. move ash grassfield13 grassfield12
+6. move ash grassfield8 grassfield9
+7. move ash grassfield9 grassfield13
+9. open ash item2 grassfield12
+10. move ash grassfield12 grassfield8
+11. move ash grassfield8 grassfield4
+12. collect-first-masterball ash item1 grassfield4 masterball1
+13. move ash grassfield4 grassfield8
+14. move ash grassfield8 grassfield9
+15. move ash grassfield9 grassfield13
+16. move ash grassfield13 grassfield12
+17. collect-second-masterball ash item2 grassfield12 masterball2
+18. move ash grassfield12 grassfield8
+19. move ash grassfield8 grassfield4
+20. capture-first-legendary-pokemon-having-two-masterball ash grassfield4 grassfield0 suicune
+21. move ash grassfield4 grassfield8
+22. move ash grassfield8 grassfield9
+23. move ash grassfield9 grassfield13
+24. move ash grassfield13 grassfield14
+25. move ash grassfield14 grassfield15
+26. move ash grassfield15 grassfield11
+27. move ash grassfield11 grassfield7
+28. move ash grassfield7 grassfield3
+29. capture-second-legendary-pokemon-having-one-masterball ash grassfield3 grassfield2 raikou
+30. move ash grassfield3 grassfield7
+31. move ash grassfield7 grassfield11
+32. move ash grassfield11 grassfield15
+33. open ash item3 grassfield15
+34. collect-first-masterball ash item3 grassfield15 masterball3
+35. move ash grassfield15 grassfield14
+36. move ash grassfield14 grassfield13
+37. capture-third-legendary-pokemon-having-one-masterball ash grassfield13 grassfield14 entei

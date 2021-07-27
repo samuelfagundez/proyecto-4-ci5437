@@ -92,6 +92,8 @@
         (border grassfield24 grassfield23)
 
         (at ash grassfield22)
+        (has-no-masterball ash)
+        (has-no-legendary-pokemon ash)
         (at raikou grassfield4)
         (at entei grassfield23)
         (at suicune grassfield20)
@@ -104,8 +106,11 @@
         (wall grassfield21)
 
         (at item1 grassfield1)
+        (in masterball1 item1)
         (at item2 grassfield9)
+        (in masterball2 item2)
         (at item3 grassfield24)
+        (in masterball3 item3)
    )
 
    (:goal (and (has-three-legendary-pokemon ash)))
