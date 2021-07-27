@@ -9,6 +9,7 @@ strips.load(
   args[1] || "./example/problem.pddl",
   function (domain, problem) {
     // Run the problem against the domain, using depth-first-search.
+    var solutions = strips.solve(domain, problem);
 
     // Use breadth-first-search.
     // var solutions = strips.solve(domain, problem, false);
@@ -17,8 +18,6 @@ strips.load(
     // cost must be a costs function which recieves a state and returns a cost
     // var solutions = strips.solve(domain, problem, cost);
 
-    var solutions = strips.solve(domain, problem);
-    
     if (!solutions.length)
       return console.log("There is no solution for this problem.");
 
@@ -26,7 +25,7 @@ strips.load(
     for (var i in solutions) {
       var solution = solutions[i];
 
-      fs.writeFile(
+      fs.writeFileSync(
         `${args[3] || "Results.txt"}`,
         `- Solution found in ${solution.steps} steps!\n`,
         function (err) {
@@ -37,7 +36,7 @@ strips.load(
 
       for (var i = 0; i < solution.path.length; i++) {
         const output = `${i + 1}. ${solution.path[i]}`;
-        fs.appendFile(
+        fs.appendFileSync(
           `${args[3] || "Results.txt"}`,
           `${output}\n`,
           function (err) {
