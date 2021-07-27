@@ -1,12 +1,12 @@
 - Solution found in 37 steps!
+1. move ash grassfield13 grassfield9
 2. move ash grassfield9 grassfield8
 3. move ash grassfield8 grassfield4
-1. move ash grassfield13 grassfield9
 4. open ash item1 grassfield4
 5. move ash grassfield4 grassfield8
-8. move ash grassfield13 grassfield12
 6. move ash grassfield8 grassfield9
 7. move ash grassfield9 grassfield13
+8. move ash grassfield13 grassfield12
 9. open ash item2 grassfield12
 10. move ash grassfield12 grassfield8
 11. move ash grassfield8 grassfield4
