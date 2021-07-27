@@ -1,4 +1,6 @@
 var strips = require("strips");
+strips.verbose = true;
+
 const fs = require("fs");
 
 const args = process.argv.slice(2);
