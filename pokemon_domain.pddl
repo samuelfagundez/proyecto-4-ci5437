@@ -2,6 +2,19 @@
     (:requirements :strips :typing)
     (:types player location masterball legendarypokemon chest)
 
+    (:predicates
+        (at ?p ?l)(border ?l1 ?l2) (wall ?l) (open ?c)
+        (empty ?c) (in ?o ?c)
+        (has-no-masterball ?p)
+        (has-one-masterball ?p)
+        (has-two-masterball ?p - player)
+        (has-three-masterball ?p - player)
+        (has-no-legendary-pokemon ?p - player)
+        (has-one-legendary-pokemon ?p - player)
+        (has-two-legendary-pokemon ?p - player)
+        (has-three-legendary-pokemon ?p - player)
+    )
+
     (:action move
         :parameters (?p - player ?l1 - location ?l2 - location)
         :precondition (and (at ?p ?l1) (border ?l1 ?l2) (not (wall ?l2)))
